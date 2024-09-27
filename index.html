@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<style>
+			body {
+				font-family: Georgia, "Times New Roman", Times, serif;
+			}
+			#wrapper {
+				display: flex;
+				flex-direction: column;
+				max-width: 400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#wrapAddItem {
+				display: flex;
+				flex-direction: column;
+				padding: 32px 32px 32px 32px;
+				background-color: rgb(241, 241, 241);
+				border-radius: 8px;
+			}
+			#addItem {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				gap: 12px;
+			}
+			#amount {
+				margin-top: 32px;
+				margin-bottom: 0px;
+			}
+			#item {
+				padding: 8px 12px;
+				border: transparent;
+				border-radius: 4px;
+				font-size: 16px;
+				width: 100%;
+			}
+			button {
+				padding: 8px 12px;
+				text-align: center;
+				border: transparent;
+				border-radius: 4px;
+				background-color: green;
+				color: aliceblue;
+				cursor: pointer;
+				width: 100%;
+				max-width: 60px;
+			}
+			#table {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			table {
+				text-align: left;
+				border-collapse: collapse;
+				table-layout: fixed;
+			}
+
+			tr:nth-child(odd) {
+				background-color: rgb(241, 241, 241); /* Màu cho hàng chẵn */
+			}
+			td:first-child {
+				width: 100%;
+				max-width: 240px;
+				overflow: hidden;
+				border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px;
+			}
+			td:last-child {
+				border-top-right-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<!-- Adding section -->
+			<h1>Add your products</h1>
+			<div id="wrapAddItem">
+				<div id="addItem">
+					<input
+						type="text"
+						placeholder="New product name"
+						id="item"
+					/>
+
+					<button
+						class="btn btn-primary"
+						onclick="addBtn()"
+					>
+						Add
+					</button>
+				</div>
+				<p id="amount"></p>
+			</div>
+
+			<br />
+			<br />
+			<br />
+			<div id="table">
+				<!-- Sample table -->
+				<table
+					border="0"
+					cellspacing="8"
+					cellpadding="8"
+					id="itemList"
+				>
+					<!-- <tr>
+						<td>Sony Xperia</td>
+						<td><button>Edit</button></td>
+						<td><button>Delete</button></td>
+					</tr>
+					<tr>
+						<td>Sony Xperia</td>
+						<td><button>Edit</button></td>
+						<td><button>Delete</button></td>
+					</tr> -->
+				</table>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
